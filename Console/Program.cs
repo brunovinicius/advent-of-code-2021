@@ -11,7 +11,6 @@ var host = new HostBuilder()
     })
     .Build();
 
-var day01 = host.Services.GetRequiredService<Day01>();
-Console.WriteLine($"{ day01?.Puzzle1() }");
-Console.WriteLine($"{ day01?.Puzzle2() }");
+var puzzleResolver = host.Services.GetRequiredService<Day02>();
+Console.WriteLine($"{ puzzleResolver.Resolve() }");
 Console.ReadKey();

@@ -5,7 +5,7 @@ namespace Application.Puzzles
 {
     public class Day01
     {
-        private const string FilePath = "C:\\advent-of-code-inputs\\day-01-puzzle-01-input.txt";
+        private const string FilePath = "C:\\advent-of-code-inputs\\day-01-input.txt";
 
         private readonly IInputFileReadingService _inputFileReadingService;
 
@@ -52,10 +52,10 @@ namespace Application.Puzzles
             return count;
         }
 
-        private IEnumerable<RadarReading> GetReadings(string fileName)
+        private IEnumerable<RadarReading> GetReadings(string filePath)
         {
             return _inputFileReadingService
-                .ReadLines(FilePath)
+                .ReadLines(filePath)
                 .Select(line => int.Parse(line))
                 .Select(depth => new RadarReading() { Depth = depth });
         }
