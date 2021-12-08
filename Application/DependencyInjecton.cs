@@ -9,6 +9,7 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton<Day01>();
             services.AddSingleton<Day02>();
             services.AddSingleton<Day03>();
+            services.AddSingleton<Day04>();
 
             return services;
         }
